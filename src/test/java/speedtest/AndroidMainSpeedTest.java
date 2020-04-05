@@ -1,3 +1,5 @@
+package speedtest;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -51,7 +53,7 @@ public class AndroidMainSpeedTest {
 
     @BeforeClass
     public void startSpeedTest() {
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver, 10);
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver, 20);
 
         try {
             WebElement nextButton = driverWait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -75,7 +77,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void networkConnectionToTime(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
         WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
 
@@ -86,9 +88,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void checkDownloadValue(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
-        WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
 
         WebElement downloadText  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.widget.FrameLayout[@content-desc='DOWNLOAD']")));
@@ -106,9 +106,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void checkUploadValue(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
-        WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
 
         WebElement uploadText  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.widget.FrameLayout[@content-desc='UPLOAD']")));
@@ -126,9 +124,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void checkPingValue(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
-        WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
 
         WebElement pingText  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.view.ViewGroup[@content-desc='Ping']")));
@@ -146,9 +142,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void checkJitterValue(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
-        WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
 
         WebElement jitterText  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.view.ViewGroup[@content-desc='Jitter']")));
@@ -166,9 +160,7 @@ public class AndroidMainSpeedTest {
     @Test
     public void checkLossValue(){
 
-        WebDriverWait driverWait = new WebDriverWait(appiumDriver,50);
-        WebElement goButton  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//android.view.View[@content-desc='Start a Speedtest']")));
+        WebDriverWait driverWait = new WebDriverWait(appiumDriver,30);
 
         WebElement lossText  = driverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//android.view.ViewGroup[@resource-id='org.zwanoo.android.speedtest:id/test_result_item_packet_loss']")));
